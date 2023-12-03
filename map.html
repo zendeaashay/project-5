@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_df48648bce9797a407c009c9081dccc3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_df48648bce9797a407c009c9081dccc3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_df48648bce9797a407c009c9081dccc3 = L.map(
+                "map_df48648bce9797a407c009c9081dccc3",
+                {
+                    center: [42.33241406866739, -71.07784250269013],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7d168de09f0ec0f0e02f4e5f80aa0124 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_7d168de09f0ec0f0e02f4e5f80aa0124.addTo(map_df48648bce9797a407c009c9081dccc3);
+    
+            var marker_cluster_69de1fff0a470595e41602988b5420a5 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_2ec3c1c712f47766120fb6b135443969 = L.marker(
+                [42.34910324469213, -71.06903199875559],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_08731dbde4991eceb95208af416067bc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2809b5da668e13832795b3f67dc886e3 = $(`<div id="html_2809b5da668e13832795b3f67dc886e3" style="width: 100.0%; height: 100.0%;">Neighborhood: Bay Village<br>FY2021.AV_mean: 1,814,906.89<br>DiffAV2021_mean: 55,873.28<br>PercChangeAV2021_mean: 0.09<br>RecoveryDiffAV_mean: 608,597.36<br>RecoveryPercChangeAV_mean: 0.53<br>GROSS_AREA_mean: 4,056.96<br>RES_FLOOR_mean: 2.10<br>LIVING_AREA_mean: 3,527.83<br>LAND_VALUE_mean: 413,391.25<br>BLDG_VALUE_mean: 1,462,971.03<br>TOTAL_VALUE_mean: 1,876,795.81<br>FY2000.AV_mean: 430,803.24<br>GrowthPercChangeAV_mean: 1.70<br>CrashPercChangeAV_mean: -0.00<br>NUM_BLDGS_mean: 1.00<br>LAND_SF_mean: 3,640.36<br>YR_BUILT_mean: 1,913.26<br>GROSS_TAX_mean: 22,829.27<br>Observation_Count: 538.00<br></div>`)[0];
+                popup_08731dbde4991eceb95208af416067bc.setContent(html_2809b5da668e13832795b3f67dc886e3);
+            
+        
+
+        marker_2ec3c1c712f47766120fb6b135443969.bindPopup(popup_08731dbde4991eceb95208af416067bc)
+        ;
+
+        
+    
+    
+            var marker_576d81f643afa14595a068cea1e955e2 = L.marker(
+                [42.35705004021341, -71.06826236662862],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_100cc518438a3e6602a65f984aead6f6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c0cdbc4fc9131948ac0acd65770eb756 = $(`<div id="html_c0cdbc4fc9131948ac0acd65770eb756" style="width: 100.0%; height: 100.0%;">Neighborhood: Beacon Hill<br>FY2021.AV_mean: 1,763,863.95<br>DiffAV2021_mean: 52,559.58<br>PercChangeAV2021_mean: 0.07<br>RecoveryDiffAV_mean: 471,822.22<br>RecoveryPercChangeAV_mean: 0.49<br>GROSS_AREA_mean: 3,051.90<br>RES_FLOOR_mean: 2.05<br>LIVING_AREA_mean: 2,530.87<br>LAND_VALUE_mean: 492,137.79<br>BLDG_VALUE_mean: 1,250,477.50<br>TOTAL_VALUE_mean: 1,743,439.62<br>FY2000.AV_mean: 473,791.08<br>GrowthPercChangeAV_mean: 1.33<br>CrashPercChangeAV_mean: 0.05<br>NUM_BLDGS_mean: 1.00<br>LAND_SF_mean: 2,533.73<br>YR_BUILT_mean: 1,906.43<br>GROSS_TAX_mean: 17,222.66<br>Observation_Count: 4,189.00<br></div>`)[0];
+                popup_100cc518438a3e6602a65f984aead6f6.setContent(html_c0cdbc4fc9131948ac0acd65770eb756);
+            
+        
+
+        marker_576d81f643afa14595a068cea1e955e2.bindPopup(popup_100cc518438a3e6602a65f984aead6f6)
+        ;
+
+        
+    
+    
+            var marker_0cba54b84d5ec6a6a054fe8c8a18e74c = L.marker(
+                [42.34835670242797, -71.15493542285233],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_23fced0f60c612d2f27b6d9b85680f2d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c836e39e6c9bee0f56ad2e302f919b9b = $(`<div id="html_c836e39e6c9bee0f56ad2e302f919b9b" style="width: 100.0%; height: 100.0%;">Neighborhood: Brighton<br>FY2021.AV_mean: 969,612.98<br>DiffAV2021_mean: 46,161.90<br>PercChangeAV2021_mean: 0.08<br>RecoveryDiffAV_mean: 280,611.38<br>RecoveryPercChangeAV_mean: 0.49<br>GROSS_AREA_mean: 4,362.77<br>RES_FLOOR_mean: 1.62<br>LIVING_AREA_mean: 3,462.27<br>LAND_VALUE_mean: 279,016.91<br>BLDG_VALUE_mean: 732,760.71<br>TOTAL_VALUE_mean: 1,014,752.14<br>FY2000.AV_mean: 271,131.94<br>GrowthPercChangeAV_mean: 1.54<br>CrashPercChangeAV_mean: -0.07<br>NUM_BLDGS_mean: 1.02<br>LAND_SF_mean: 6,207.97<br>YR_BUILT_mean: 1,935.99<br>GROSS_TAX_mean: 10,893.49<br>Observation_Count: 11,839.00<br></div>`)[0];
+                popup_23fced0f60c612d2f27b6d9b85680f2d.setContent(html_c836e39e6c9bee0f56ad2e302f919b9b);
+            
+        
+
+        marker_0cba54b84d5ec6a6a054fe8c8a18e74c.bindPopup(popup_23fced0f60c612d2f27b6d9b85680f2d)
+        ;
+
+        
+    
+    
+            var marker_20d0029b8694d49b772ae9c7859fa8e8 = L.marker(
+                [42.37931017410282, -71.06376664747475],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_222636e5e4c2629d2df38b31d2ee3097 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b1bf664ae5eec93d2c5b8ba6f4544375 = $(`<div id="html_b1bf664ae5eec93d2c5b8ba6f4544375" style="width: 100.0%; height: 100.0%;">Neighborhood: Charlestown<br>FY2021.AV_mean: 1,173,417.27<br>DiffAV2021_mean: 72,740.71<br>PercChangeAV2021_mean: 0.07<br>RecoveryDiffAV_mean: 360,754.06<br>RecoveryPercChangeAV_mean: 0.58<br>GROSS_AREA_mean: 4,375.69<br>RES_FLOOR_mean: 1.98<br>LIVING_AREA_mean: 3,704.37<br>LAND_VALUE_mean: 245,409.66<br>BLDG_VALUE_mean: 890,472.89<br>TOTAL_VALUE_mean: 1,140,406.21<br>FY2000.AV_mean: 355,010.92<br>GrowthPercChangeAV_mean: 1.59<br>CrashPercChangeAV_mean: -0.05<br>NUM_BLDGS_mean: 1.02<br>LAND_SF_mean: 5,322.13<br>YR_BUILT_mean: 1,921.25<br>GROSS_TAX_mean: 12,020.29<br>Observation_Count: 7,182.00<br></div>`)[0];
+                popup_222636e5e4c2629d2df38b31d2ee3097.setContent(html_b1bf664ae5eec93d2c5b8ba6f4544375);
+            
+        
+
+        marker_20d0029b8694d49b772ae9c7859fa8e8.bindPopup(popup_222636e5e4c2629d2df38b31d2ee3097)
+        ;
+
+        
+    
+    
+            var marker_e23d12c312d77965f9702f0e9f27f12d = L.marker(
+                [42.34902733391333, -71.06166205339726],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_3ef1defac429bbb6b574947786035c1c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_540fcd0c43dac7a2d92c130aecbc8122 = $(`<div id="html_540fcd0c43dac7a2d92c130aecbc8122" style="width: 100.0%; height: 100.0%;">Neighborhood: Chinatown<br>FY2021.AV_mean: 3,729,382.39<br>DiffAV2021_mean: 164,928.40<br>PercChangeAV2021_mean: 0.05<br>RecoveryDiffAV_mean: 861,693.25<br>RecoveryPercChangeAV_mean: 0.63<br>GROSS_AREA_mean: 10,962.96<br>RES_FLOOR_mean: 1.97<br>LIVING_AREA_mean: 9,580.53<br>LAND_VALUE_mean: 946,743.40<br>BLDG_VALUE_mean: 3,167,582.60<br>TOTAL_VALUE_mean: 4,120,673.82<br>FY2000.AV_mean: 805,959.77<br>GrowthPercChangeAV_mean: 1.58<br>CrashPercChangeAV_mean: 0.08<br>NUM_BLDGS_mean: 1.03<br>LAND_SF_mean: 9,109.26<br>YR_BUILT_mean: 1,946.26<br>GROSS_TAX_mean: 29,697.25<br>Observation_Count: 595.00<br></div>`)[0];
+                popup_3ef1defac429bbb6b574947786035c1c.setContent(html_540fcd0c43dac7a2d92c130aecbc8122);
+            
+        
+
+        marker_e23d12c312d77965f9702f0e9f27f12d.bindPopup(popup_3ef1defac429bbb6b574947786035c1c)
+        ;
+
+        
+    
+    
+            var marker_07d99b0abc030b732fe510e068402b24 = L.marker(
+                [42.298462333358806, -71.06345682191385],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_e3ae3d224b09b548b897bd5419cf63dc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d5a4c243ce5494d7fea62a57d79c672f = $(`<div id="html_d5a4c243ce5494d7fea62a57d79c672f" style="width: 100.0%; height: 100.0%;">Neighborhood: Dorchester<br>FY2021.AV_mean: 766,843.08<br>DiffAV2021_mean: 67,812.14<br>PercChangeAV2021_mean: 0.15<br>RecoveryDiffAV_mean: 209,235.77<br>RecoveryPercChangeAV_mean: 0.57<br>GROSS_AREA_mean: 5,206.33<br>RES_FLOOR_mean: 2.12<br>LIVING_AREA_mean: 3,853.43<br>LAND_VALUE_mean: 230,755.55<br>BLDG_VALUE_mean: 547,148.93<br>TOTAL_VALUE_mean: 781,328.20<br>FY2000.AV_mean: 218,887.50<br>GrowthPercChangeAV_mean: 2.42<br>CrashPercChangeAV_mean: -0.15<br>NUM_BLDGS_mean: 1.02<br>LAND_SF_mean: 6,955.37<br>YR_BUILT_mean: 1,925.29<br>GROSS_TAX_mean: 7,875.98<br>Observation_Count: 26,482.00<br></div>`)[0];
+                popup_e3ae3d224b09b548b897bd5419cf63dc.setContent(html_d5a4c243ce5494d7fea62a57d79c672f);
+            
+        
+
+        marker_07d99b0abc030b732fe510e068402b24.bindPopup(popup_e3ae3d224b09b548b897bd5419cf63dc)
+        ;
+
+        
+    
+    
+            var marker_4d5081f04b80c8019d60e35ede58ca66 = L.marker(
+                [42.355593177987956, -71.05765065737086],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_c15fc849a23699baaa07ed4270b61eb7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f8f9513ed163da23381e3ebac8f574dd = $(`<div id="html_f8f9513ed163da23381e3ebac8f574dd" style="width: 100.0%; height: 100.0%;">Neighborhood: Downtown<br>FY2021.AV_mean: 6,380,782.28<br>DiffAV2021_mean: 186,114.78<br>PercChangeAV2021_mean: -0.00<br>RecoveryDiffAV_mean: 1,697,967.97<br>RecoveryPercChangeAV_mean: 0.52<br>GROSS_AREA_mean: 15,550.59<br>RES_FLOOR_mean: 1.54<br>LIVING_AREA_mean: 14,066.51<br>LAND_VALUE_mean: 1,469,332.88<br>BLDG_VALUE_mean: 5,375,296.80<br>TOTAL_VALUE_mean: 6,849,120.63<br>FY2000.AV_mean: 2,063,804.37<br>GrowthPercChangeAV_mean: 1.49<br>CrashPercChangeAV_mean: 0.02<br>NUM_BLDGS_mean: 1.00<br>LAND_SF_mean: 6,764.56<br>YR_BUILT_mean: 1,963.02<br>GROSS_TAX_mean: 124,525.94<br>Observation_Count: 5,170.00<br></div>`)[0];
+                popup_c15fc849a23699baaa07ed4270b61eb7.setContent(html_f8f9513ed163da23381e3ebac8f574dd);
+            
+        
+
+        marker_4d5081f04b80c8019d60e35ede58ca66.bindPopup(popup_c15fc849a23699baaa07ed4270b61eb7)
+        ;
+
+        
+    
+    
+            var marker_d6be6b529b58e67dae08b7218564c537 = L.marker(
+                [42.37269016982925, -71.01566374202434],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_eea079151106627a4bc1370987d9a052 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_600cf9dd96041502e8b3236fa464b766 = $(`<div id="html_600cf9dd96041502e8b3236fa464b766" style="width: 100.0%; height: 100.0%;">Neighborhood: East Boston<br>FY2021.AV_mean: 876,302.43<br>DiffAV2021_mean: 93,029.64<br>PercChangeAV2021_mean: 0.17<br>RecoveryDiffAV_mean: 238,195.11<br>RecoveryPercChangeAV_mean: 0.68<br>GROSS_AREA_mean: 5,236.93<br>RES_FLOOR_mean: 2.11<br>LIVING_AREA_mean: 4,265.48<br>LAND_VALUE_mean: 284,618.21<br>BLDG_VALUE_mean: 615,122.46<br>TOTAL_VALUE_mean: 906,771.29<br>FY2000.AV_mean: 258,116.36<br>GrowthPercChangeAV_mean: 2.49<br>CrashPercChangeAV_mean: -0.19<br>NUM_BLDGS_mean: 1.02<br>LAND_SF_mean: 18,114.06<br>YR_BUILT_mean: 1,927.77<br>GROSS_TAX_mean: 8,885.07<br>Observation_Count: 9,139.00<br></div>`)[0];
+                popup_eea079151106627a4bc1370987d9a052.setContent(html_600cf9dd96041502e8b3236fa464b766);
+            
+        
+
+        marker_d6be6b529b58e67dae08b7218564c537.bindPopup(popup_eea079151106627a4bc1370987d9a052)
+        ;
+
+        
+    
+    
+            var marker_ccc6054a3f63dd3544f2b34d1e22bc4c = L.marker(
+                [42.344767168487245, -71.09611485698127],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_0bb2363c794bc2f9bb1370490c092887 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7801090d807b01fa283d9bdfb845dedd = $(`<div id="html_7801090d807b01fa283d9bdfb845dedd" style="width: 100.0%; height: 100.0%;">Neighborhood: Fenway<br>FY2021.AV_mean: 2,921,624.15<br>DiffAV2021_mean: 189,560.34<br>PercChangeAV2021_mean: 0.03<br>RecoveryDiffAV_mean: 838,195.36<br>RecoveryPercChangeAV_mean: 0.57<br>GROSS_AREA_mean: 8,351.31<br>RES_FLOOR_mean: 1.60<br>LIVING_AREA_mean: 7,304.42<br>LAND_VALUE_mean: 884,378.73<br>BLDG_VALUE_mean: 2,420,175.23<br>TOTAL_VALUE_mean: 3,306,919.61<br>FY2000.AV_mean: 537,440.73<br>GrowthPercChangeAV_mean: 1.85<br>CrashPercChangeAV_mean: 0.08<br>NUM_BLDGS_mean: 1.01<br>LAND_SF_mean: 5,899.83<br>YR_BUILT_mean: 1,923.48<br>GROSS_TAX_mean: 22,293.05<br>Observation_Count: 4,598.00<br></div>`)[0];
+                popup_0bb2363c794bc2f9bb1370490c092887.setContent(html_7801090d807b01fa283d9bdfb845dedd);
+            
+        
+
+        marker_ccc6054a3f63dd3544f2b34d1e22bc4c.bindPopup(popup_0bb2363c794bc2f9bb1370490c092887)
+        ;
+
+        
+    
+    
+            var marker_cdbf7003a2d960c2c00659d2e54665d3 = L.marker(
+                [42.32794087542065, -70.96877509407601],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_de53637c4809cb36f8c8a69c0143f861 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fff2475c2ef659533a4e61d925e1fc35 = $(`<div id="html_fff2475c2ef659533a4e61d925e1fc35" style="width: 100.0%; height: 100.0%;">Neighborhood: Harbor Islands<br>FY2021.AV_mean: 24,101,565.38<br>DiffAV2021_mean: -41,323.08<br>PercChangeAV2021_mean: -0.02<br>RecoveryDiffAV_mean: 417,338.33<br>RecoveryPercChangeAV_mean: 0.56<br>GROSS_AREA_mean: 39,524.64<br>RES_FLOOR_mean: 1.90<br>LIVING_AREA_mean: 31,799.27<br>LAND_VALUE_mean: 20,941,461.54<br>BLDG_VALUE_mean: 4,297,688.46<br>TOTAL_VALUE_mean: 25,245,446.15<br>FY2000.AV_mean: 375,971.96<br>GrowthPercChangeAV_mean: 1.92<br>CrashPercChangeAV_mean: -0.06<br>NUM_BLDGS_mean: 2.50<br>LAND_SF_mean: 1,312,052.08<br>YR_BUILT_mean: 1,927.31<br>GROSS_TAX_mean: 564.76<br>Observation_Count: 26.00<br></div>`)[0];
+                popup_de53637c4809cb36f8c8a69c0143f861.setContent(html_fff2475c2ef659533a4e61d925e1fc35);
+            
+        
+
+        marker_cdbf7003a2d960c2c00659d2e54665d3.bindPopup(popup_de53637c4809cb36f8c8a69c0143f861)
+        ;
+
+        
+    
+    
+            var marker_6bb8236a75e4d600ad5b58fb911b542a = L.marker(
+                [42.25503506090301, -71.12629868045502],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_e8e5b690e323f9cef8846f7e560b6c76 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fd9d9b499d8c593fd61b1241bf4adbcc = $(`<div id="html_fd9d9b499d8c593fd61b1241bf4adbcc" style="width: 100.0%; height: 100.0%;">Neighborhood: Hyde Park<br>FY2021.AV_mean: 557,570.68<br>DiffAV2021_mean: 36,953.14<br>PercChangeAV2021_mean: 0.10<br>RecoveryDiffAV_mean: 134,901.37<br>RecoveryPercChangeAV_mean: 0.37<br>GROSS_AREA_mean: 4,026.79<br>RES_FLOOR_mean: 1.78<br>LIVING_AREA_mean: 2,807.38<br>LAND_VALUE_mean: 241,273.68<br>BLDG_VALUE_mean: 367,844.09<br>TOTAL_VALUE_mean: 611,848.99<br>FY2000.AV_mean: 194,097.89<br>GrowthPercChangeAV_mean: 1.95<br>CrashPercChangeAV_mean: -0.18<br>NUM_BLDGS_mean: 1.02<br>LAND_SF_mean: 12,419.47<br>YR_BUILT_mean: 1,938.58<br>GROSS_TAX_mean: 6,193.60<br>Observation_Count: 9,333.00<br></div>`)[0];
+                popup_e8e5b690e323f9cef8846f7e560b6c76.setContent(html_fd9d9b499d8c593fd61b1241bf4adbcc);
+            
+        
+
+        marker_6bb8236a75e4d600ad5b58fb911b542a.bindPopup(popup_e8e5b690e323f9cef8846f7e560b6c76)
+        ;
+
+        
+    
+    
+            var marker_8a80ff58a170ee0752802e9a64f3dabb = L.marker(
+                [42.307769503348794, -71.1150969429541],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_5ee3addbac94536a3d9c9b1d3f2ce625 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d240a91c483321977925dc187aa885c7 = $(`<div id="html_d240a91c483321977925dc187aa885c7" style="width: 100.0%; height: 100.0%;">Neighborhood: Jamaica Plain<br>FY2021.AV_mean: 994,662.53<br>DiffAV2021_mean: 63,587.13<br>PercChangeAV2021_mean: 0.09<br>RecoveryDiffAV_mean: 291,247.52<br>RecoveryPercChangeAV_mean: 0.55<br>GROSS_AREA_mean: 4,315.99<br>RES_FLOOR_mean: 1.92<br>LIVING_AREA_mean: 3,319.51<br>LAND_VALUE_mean: 239,759.79<br>BLDG_VALUE_mean: 701,274.19<br>TOTAL_VALUE_mean: 942,921.94<br>FY2000.AV_mean: 287,085.90<br>GrowthPercChangeAV_mean: 1.92<br>CrashPercChangeAV_mean: -0.07<br>NUM_BLDGS_mean: 1.02<br>LAND_SF_mean: 8,077.31<br>YR_BUILT_mean: 1,928.40<br>GROSS_TAX_mean: 8,495.42<br>Observation_Count: 12,625.00<br></div>`)[0];
+                popup_5ee3addbac94536a3d9c9b1d3f2ce625.setContent(html_d240a91c483321977925dc187aa885c7);
+            
+        
+
+        marker_8a80ff58a170ee0752802e9a64f3dabb.bindPopup(popup_5ee3addbac94536a3d9c9b1d3f2ce625)
+        ;
+
+        
+    
+    
+            var marker_6154461048ab8ccfc5c33a3428b89239 = L.marker(
+                [42.350982945102515, -71.05782809420242],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_69797c4a96e4cb2c507c51877cb1dafb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_44d8832400cf0712d20c545efe110bdf = $(`<div id="html_44d8832400cf0712d20c545efe110bdf" style="width: 100.0%; height: 100.0%;">Neighborhood: Leather District<br>FY2021.AV_mean: 1,666,323.68<br>DiffAV2021_mean: 39,774.97<br>PercChangeAV2021_mean: 0.02<br>RecoveryDiffAV_mean: 439,241.50<br>RecoveryPercChangeAV_mean: 0.48<br>GROSS_AREA_mean: 5,677.95<br>RES_FLOOR_mean: 1.51<br>LIVING_AREA_mean: 4,921.74<br>LAND_VALUE_mean: 295,622.00<br>BLDG_VALUE_mean: 1,417,793.49<br>TOTAL_VALUE_mean: 1,713,443.74<br>FY2000.AV_mean: 502,263.79<br>GrowthPercChangeAV_mean: 1.59<br>CrashPercChangeAV_mean: -0.02<br>NUM_BLDGS_mean: 1.00<br>LAND_SF_mean: 2,407.94<br>YR_BUILT_mean: 1,927.33<br>GROSS_TAX_mean: 31,912.41<br>Observation_Count: 538.00<br></div>`)[0];
+                popup_69797c4a96e4cb2c507c51877cb1dafb.setContent(html_44d8832400cf0712d20c545efe110bdf);
+            
+        
+
+        marker_6154461048ab8ccfc5c33a3428b89239.bindPopup(popup_69797c4a96e4cb2c507c51877cb1dafb)
+        ;
+
+        
+    
+    
+            var marker_e8c2655e47c041bdb8cfed10b9e21ece = L.marker(
+                [42.338608879646394, -71.10510267838991],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_53685ed25e097fd5e997d31a34877527 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_66752c22b6df410a0a26139fca5d83c5 = $(`<div id="html_66752c22b6df410a0a26139fca5d83c5" style="width: 100.0%; height: 100.0%;">Neighborhood: Longwood<br>FY2021.AV_mean: 25,360,924.23<br>DiffAV2021_mean: 2,580,604.08<br>PercChangeAV2021_mean: 0.08<br>RecoveryDiffAV_mean: 7,362,265.57<br>RecoveryPercChangeAV_mean: 0.63<br>GROSS_AREA_mean: 54,230.40<br>RES_FLOOR_mean: 1.55<br>LIVING_AREA_mean: 48,352.55<br>LAND_VALUE_mean: 7,113,723.42<br>BLDG_VALUE_mean: 24,153,768.30<br>TOTAL_VALUE_mean: 31,306,393.77<br>FY2000.AV_mean: 2,383,581.63<br>GrowthPercChangeAV_mean: 2.29<br>CrashPercChangeAV_mean: 0.74<br>NUM_BLDGS_mean: 1.20<br>LAND_SF_mean: 23,376.08<br>YR_BUILT_mean: 1,946.27<br>GROSS_TAX_mean: 93,382.08<br>Observation_Count: 385.00<br></div>`)[0];
+                popup_53685ed25e097fd5e997d31a34877527.setContent(html_66752c22b6df410a0a26139fca5d83c5);
+            
+        
+
+        marker_e8c2655e47c041bdb8cfed10b9e21ece.bindPopup(popup_53685ed25e097fd5e997d31a34877527)
+        ;
+
+        
+    
+    
+            var marker_d5c7929ffad2b55e17aed3949de10c1e = L.marker(
+                [42.277005139504254, -71.09144626298225],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_799d1fdb30efacfd869dfc6e0c0c7edf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d440f23b11f035017fa213bfea9fd8d0 = $(`<div id="html_d440f23b11f035017fa213bfea9fd8d0" style="width: 100.0%; height: 100.0%;">Neighborhood: Mattapan<br>FY2021.AV_mean: 636,716.20<br>DiffAV2021_mean: 57,598.16<br>PercChangeAV2021_mean: 0.13<br>RecoveryDiffAV_mean: 159,563.91<br>RecoveryPercChangeAV_mean: 0.49<br>GROSS_AREA_mean: 4,809.67<br>RES_FLOOR_mean: 1.93<br>LIVING_AREA_mean: 3,415.98<br>LAND_VALUE_mean: 243,496.16<br>BLDG_VALUE_mean: 446,262.49<br>TOTAL_VALUE_mean: 693,140.90<br>FY2000.AV_mean: 173,231.17<br>GrowthPercChangeAV_mean: 2.27<br>CrashPercChangeAV_mean: -0.19<br>NUM_BLDGS_mean: 1.04<br>LAND_SF_mean: 9,032.94<br>YR_BUILT_mean: 1,932.85<br>GROSS_TAX_mean: 6,221.56<br>Observation_Count: 5,289.00<br></div>`)[0];
+                popup_799d1fdb30efacfd869dfc6e0c0c7edf.setContent(html_d440f23b11f035017fa213bfea9fd8d0);
+            
+        
+
+        marker_d5c7929ffad2b55e17aed3949de10c1e.bindPopup(popup_799d1fdb30efacfd869dfc6e0c0c7edf)
+        ;
+
+        
+    
+    
+            var marker_f470a2d5f0c0654a1a9835104522f81b = L.marker(
+                [42.33174148832991, -71.1026066528572],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_e8c51007fd2c857d7c1ef0e91abba6db = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a188a0017ef674088211a54356c0d09b = $(`<div id="html_a188a0017ef674088211a54356c0d09b" style="width: 100.0%; height: 100.0%;">Neighborhood: Mission Hill<br>FY2021.AV_mean: 1,624,421.62<br>DiffAV2021_mean: 70,840.85<br>PercChangeAV2021_mean: 0.10<br>RecoveryDiffAV_mean: 600,202.72<br>RecoveryPercChangeAV_mean: 0.87<br>GROSS_AREA_mean: 7,218.47<br>RES_FLOOR_mean: 2.21<br>LIVING_AREA_mean: 5,927.79<br>LAND_VALUE_mean: 509,903.33<br>BLDG_VALUE_mean: 1,217,139.05<br>TOTAL_VALUE_mean: 1,730,846.79<br>FY2000.AV_mean: 293,981.25<br>GrowthPercChangeAV_mean: 2.74<br>CrashPercChangeAV_mean: 0.09<br>NUM_BLDGS_mean: 1.03<br>LAND_SF_mean: 6,345.17<br>YR_BUILT_mean: 1,932.78<br>GROSS_TAX_mean: 14,489.62<br>Observation_Count: 2,184.00<br></div>`)[0];
+                popup_e8c51007fd2c857d7c1ef0e91abba6db.setContent(html_a188a0017ef674088211a54356c0d09b);
+            
+        
+
+        marker_f470a2d5f0c0654a1a9835104522f81b.bindPopup(popup_e8c51007fd2c857d7c1ef0e91abba6db)
+        ;
+
+        
+    
+    
+            var marker_767a2da00355bfdb87ffb2f9418a75b2 = L.marker(
+                [42.36546472625824, -71.05385774051861],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_65461eaf167b055786b0f6b0f00aac1d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_00abe2cbb1ec88204accf191153b482f = $(`<div id="html_00abe2cbb1ec88204accf191153b482f" style="width: 100.0%; height: 100.0%;">Neighborhood: North End<br>FY2021.AV_mean: 1,136,041.34<br>DiffAV2021_mean: 25,782.85<br>PercChangeAV2021_mean: 0.04<br>RecoveryDiffAV_mean: 340,968.56<br>RecoveryPercChangeAV_mean: 0.52<br>GROSS_AREA_mean: 3,045.02<br>RES_FLOOR_mean: 1.85<br>LIVING_AREA_mean: 2,621.93<br>LAND_VALUE_mean: 214,795.55<br>BLDG_VALUE_mean: 885,536.62<br>TOTAL_VALUE_mean: 1,101,517.37<br>FY2000.AV_mean: 343,403.95<br>GrowthPercChangeAV_mean: 1.55<br>CrashPercChangeAV_mean: -0.01<br>NUM_BLDGS_mean: 1.01<br>LAND_SF_mean: 2,277.08<br>YR_BUILT_mean: 1,919.29<br>GROSS_TAX_mean: 12,109.12<br>Observation_Count: 4,141.00<br></div>`)[0];
+                popup_65461eaf167b055786b0f6b0f00aac1d.setContent(html_00abe2cbb1ec88204accf191153b482f);
+            
+        
+
+        marker_767a2da00355bfdb87ffb2f9418a75b2.bindPopup(popup_65461eaf167b055786b0f6b0f00aac1d)
+        ;
+
+        
+    
+    
+            var marker_ded607c3744f8205f6b914ae9ec16606 = L.marker(
+                [42.28252393711163, -71.12666259244538],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_bd302185c53b3dbe099f33ff60f8db7b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_af01ad32db72d6797d33c00ac213fe12 = $(`<div id="html_af01ad32db72d6797d33c00ac213fe12" style="width: 100.0%; height: 100.0%;">Neighborhood: Roslindale<br>FY2021.AV_mean: 648,844.78<br>DiffAV2021_mean: 46,912.98<br>PercChangeAV2021_mean: 0.11<br>RecoveryDiffAV_mean: 175,310.03<br>RecoveryPercChangeAV_mean: 0.43<br>GROSS_AREA_mean: 3,777.80<br>RES_FLOOR_mean: 1.92<br>LIVING_AREA_mean: 2,653.81<br>LAND_VALUE_mean: 185,919.66<br>BLDG_VALUE_mean: 449,103.32<br>TOTAL_VALUE_mean: 636,168.34<br>FY2000.AV_mean: 217,924.88<br>GrowthPercChangeAV_mean: 1.81<br>CrashPercChangeAV_mean: -0.13<br>NUM_BLDGS_mean: 1.01<br>LAND_SF_mean: 6,982.27<br>YR_BUILT_mean: 1,931.11<br>GROSS_TAX_mean: 6,526.78<br>Observation_Count: 8,757.00<br></div>`)[0];
+                popup_bd302185c53b3dbe099f33ff60f8db7b.setContent(html_af01ad32db72d6797d33c00ac213fe12);
+            
+        
+
+        marker_ded607c3744f8205f6b914ae9ec16606.bindPopup(popup_bd302185c53b3dbe099f33ff60f8db7b)
+        ;
+
+        
+    
+    
+            var marker_c1b8451a541875f7eee6352cd859ceb1 = L.marker(
+                [42.31851857212616, -71.08664322574288],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_b64931af6f982cebbf3282a6ca1559a9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1d7612a2333d00640b84c95f299c2123 = $(`<div id="html_1d7612a2333d00640b84c95f299c2123" style="width: 100.0%; height: 100.0%;">Neighborhood: Roxbury<br>FY2021.AV_mean: 938,190.71<br>DiffAV2021_mean: 62,169.85<br>PercChangeAV2021_mean: 0.14<br>RecoveryDiffAV_mean: 272,774.73<br>RecoveryPercChangeAV_mean: 0.73<br>GROSS_AREA_mean: 6,601.77<br>RES_FLOOR_mean: 2.16<br>LIVING_AREA_mean: 5,268.77<br>LAND_VALUE_mean: 330,303.07<br>BLDG_VALUE_mean: 659,013.98<br>TOTAL_VALUE_mean: 992,144.75<br>FY2000.AV_mean: 275,429.33<br>GrowthPercChangeAV_mean: 2.53<br>CrashPercChangeAV_mean: -0.04<br>NUM_BLDGS_mean: 1.03<br>LAND_SF_mean: 8,775.55<br>YR_BUILT_mean: 1,929.62<br>GROSS_TAX_mean: 7,931.38<br>Observation_Count: 9,374.00<br></div>`)[0];
+                popup_b64931af6f982cebbf3282a6ca1559a9.setContent(html_1d7612a2333d00640b84c95f299c2123);
+            
+        
+
+        marker_c1b8451a541875f7eee6352cd859ceb1.bindPopup(popup_b64931af6f982cebbf3282a6ca1559a9)
+        ;
+
+        
+    
+    
+            var marker_854f19935eda4a86e805d66cd4e054dc = L.marker(
+                [42.334908501019896, -71.044643938523],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_1c2e1f10a8bfe4ba685a1f23e4cf358a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_abd35d610fca7a0c817640e1ca53bad9 = $(`<div id="html_abd35d610fca7a0c817640e1ca53bad9" style="width: 100.0%; height: 100.0%;">Neighborhood: South Boston<br>FY2021.AV_mean: 960,377.48<br>DiffAV2021_mean: 73,080.68<br>PercChangeAV2021_mean: 0.10<br>RecoveryDiffAV_mean: 332,467.35<br>RecoveryPercChangeAV_mean: 0.71<br>GROSS_AREA_mean: 3,880.46<br>RES_FLOOR_mean: 1.92<br>LIVING_AREA_mean: 3,199.33<br>LAND_VALUE_mean: 179,647.25<br>BLDG_VALUE_mean: 698,941.72<br>TOTAL_VALUE_mean: 880,264.02<br>FY2000.AV_mean: 303,230.39<br>GrowthPercChangeAV_mean: 2.07<br>CrashPercChangeAV_mean: -0.05<br>NUM_BLDGS_mean: 1.01<br>LAND_SF_mean: 4,482.88<br>YR_BUILT_mean: 1,931.79<br>GROSS_TAX_mean: 9,278.60<br>Observation_Count: 15,005.00<br></div>`)[0];
+                popup_1c2e1f10a8bfe4ba685a1f23e4cf358a.setContent(html_abd35d610fca7a0c817640e1ca53bad9);
+            
+        
+
+        marker_854f19935eda4a86e805d66cd4e054dc.bindPopup(popup_1c2e1f10a8bfe4ba685a1f23e4cf358a)
+        ;
+
+        
+    
+    
+            var marker_40fcd290ab43bc4283428312fbfe356c = L.marker(
+                [42.34641665367828, -71.04172701648406],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_56803511de97aea16c853d667174860f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e16b4e82f3c8e8b7aa82b93f8011669d = $(`<div id="html_e16b4e82f3c8e8b7aa82b93f8011669d" style="width: 100.0%; height: 100.0%;">Neighborhood: South Boston Waterfront<br>FY2021.AV_mean: 6,510,249.21<br>DiffAV2021_mean: 656,364.50<br>PercChangeAV2021_mean: 0.50<br>RecoveryDiffAV_mean: 1,993,420.99<br>RecoveryPercChangeAV_mean: 1.27<br>GROSS_AREA_mean: 17,756.23<br>RES_FLOOR_mean: 1.57<br>LIVING_AREA_mean: 16,427.49<br>LAND_VALUE_mean: 2,094,333.46<br>BLDG_VALUE_mean: 5,439,438.59<br>TOTAL_VALUE_mean: 7,547,974.59<br>FY2000.AV_mean: 564,509.09<br>GrowthPercChangeAV_mean: 1.95<br>CrashPercChangeAV_mean: -0.03<br>NUM_BLDGS_mean: 1.02<br>LAND_SF_mean: 17,096.87<br>YR_BUILT_mean: 1,965.97<br>GROSS_TAX_mean: 120,196.98<br>Observation_Count: 2,321.00<br></div>`)[0];
+                popup_56803511de97aea16c853d667174860f.setContent(html_e16b4e82f3c8e8b7aa82b93f8011669d);
+            
+        
+
+        marker_40fcd290ab43bc4283428312fbfe356c.bindPopup(popup_56803511de97aea16c853d667174860f)
+        ;
+
+        
+    
+    
+            var marker_c631fdc925c1e9df0e46c77430da3a31 = L.marker(
+                [42.341350404933614, -71.07136929528559],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_defac03222d470b05b514af6e5501b6a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_21ecde40aff3fb874a148cb26869f9db = $(`<div id="html_21ecde40aff3fb874a148cb26869f9db" style="width: 100.0%; height: 100.0%;">Neighborhood: South End<br>FY2021.AV_mean: 1,482,249.93<br>DiffAV2021_mean: 59,970.67<br>PercChangeAV2021_mean: 0.09<br>RecoveryDiffAV_mean: 532,272.50<br>RecoveryPercChangeAV_mean: 0.57<br>GROSS_AREA_mean: 4,192.95<br>RES_FLOOR_mean: 1.96<br>LIVING_AREA_mean: 3,678.04<br>LAND_VALUE_mean: 262,077.06<br>BLDG_VALUE_mean: 1,207,139.49<br>TOTAL_VALUE_mean: 1,470,086.37<br>FY2000.AV_mean: 396,108.45<br>GrowthPercChangeAV_mean: 1.75<br>CrashPercChangeAV_mean: 0.04<br>NUM_BLDGS_mean: 1.01<br>LAND_SF_mean: 3,332.64<br>YR_BUILT_mean: 1,927.12<br>GROSS_TAX_mean: 14,857.67<br>Observation_Count: 10,860.00<br></div>`)[0];
+                popup_defac03222d470b05b514af6e5501b6a.setContent(html_21ecde40aff3fb874a148cb26869f9db);
+            
+        
+
+        marker_c631fdc925c1e9df0e46c77430da3a31.bindPopup(popup_defac03222d470b05b514af6e5501b6a)
+        ;
+
+        
+    
+    
+            var marker_1696f0b7092e4c5c4e4fcae6f80a9317 = L.marker(
+                [42.36466834174531, -71.0655903732542],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_87f91968af503cf4d97b10a4ed1e1274 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f562a3b722db603b8af713c05d16e5e9 = $(`<div id="html_f562a3b722db603b8af713c05d16e5e9" style="width: 100.0%; height: 100.0%;">Neighborhood: West End<br>FY2021.AV_mean: 3,749,340.79<br>DiffAV2021_mean: 326,717.51<br>PercChangeAV2021_mean: 0.03<br>RecoveryDiffAV_mean: 1,270,391.90<br>RecoveryPercChangeAV_mean: 0.47<br>GROSS_AREA_mean: 10,648.37<br>RES_FLOOR_mean: 1.47<br>LIVING_AREA_mean: 9,514.69<br>LAND_VALUE_mean: 986,982.43<br>BLDG_VALUE_mean: 3,137,234.69<br>TOTAL_VALUE_mean: 4,126,393.34<br>FY2000.AV_mean: 601,724.75<br>GrowthPercChangeAV_mean: 1.79<br>CrashPercChangeAV_mean: -0.04<br>NUM_BLDGS_mean: 1.01<br>LAND_SF_mean: 6,909.40<br>YR_BUILT_mean: 1,952.73<br>GROSS_TAX_mean: 27,757.93<br>Observation_Count: 2,371.00<br></div>`)[0];
+                popup_87f91968af503cf4d97b10a4ed1e1274.setContent(html_f562a3b722db603b8af713c05d16e5e9);
+            
+        
+
+        marker_1696f0b7092e4c5c4e4fcae6f80a9317.bindPopup(popup_87f91968af503cf4d97b10a4ed1e1274)
+        ;
+
+        
+    
+    
+            var marker_dd830e727c74372c0a311fed80797045 = L.marker(
+                [42.28064227387584, -71.16002690899342],
+                {}
+            ).addTo(marker_cluster_69de1fff0a470595e41602988b5420a5);
+        
+    
+        var popup_ad9b6967e01b0e3645ca325cfd2f663c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0f84e334bb45b4390b1a2c0ae611c521 = $(`<div id="html_0f84e334bb45b4390b1a2c0ae611c521" style="width: 100.0%; height: 100.0%;">Neighborhood: West Roxbury<br>FY2021.AV_mean: 647,905.24<br>DiffAV2021_mean: 41,060.72<br>PercChangeAV2021_mean: 0.11<br>RecoveryDiffAV_mean: 143,072.47<br>RecoveryPercChangeAV_mean: 0.34<br>GROSS_AREA_mean: 3,775.47<br>RES_FLOOR_mean: 1.72<br>LIVING_AREA_mean: 2,629.90<br>LAND_VALUE_mean: 242,357.47<br>BLDG_VALUE_mean: 473,620.58<br>TOTAL_VALUE_mean: 717,758.85<br>FY2000.AV_mean: 222,402.42<br>GrowthPercChangeAV_mean: 1.41<br>CrashPercChangeAV_mean: -0.09<br>NUM_BLDGS_mean: 1.01<br>LAND_SF_mean: 10,987.15<br>YR_BUILT_mean: 1,941.07<br>GROSS_TAX_mean: 7,277.97<br>Observation_Count: 11,900.00<br></div>`)[0];
+                popup_ad9b6967e01b0e3645ca325cfd2f663c.setContent(html_0f84e334bb45b4390b1a2c0ae611c521);
+            
+        
+
+        marker_dd830e727c74372c0a311fed80797045.bindPopup(popup_ad9b6967e01b0e3645ca325cfd2f663c)
+        ;
+
+        
+    
+    
+                marker_cluster_69de1fff0a470595e41602988b5420a5.addTo(map_df48648bce9797a407c009c9081dccc3);
+</script>
+</html>

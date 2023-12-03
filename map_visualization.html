@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3ff069119328114a7fc139c90d74429a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3ff069119328114a7fc139c90d74429a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3ff069119328114a7fc139c90d74429a = L.map(
+                "map_3ff069119328114a7fc139c90d74429a",
+                {
+                    center: [42.33241406866739, -71.07784250269013],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d485c98b8a4e35b23d7049367fbd5e46 = L.tileLayer(
+                "Stamen Terrain",
+                {"attribution": "Stamen Terrain", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_d485c98b8a4e35b23d7049367fbd5e46.addTo(map_3ff069119328114a7fc139c90d74429a);
+    
+            var marker_f4f098563b860f74cb6fcaefbbee31cf = L.marker(
+                [42.34910324469213, -71.06903199875559],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_260ae3b12eda4fe3e164df8811e87d7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f4f098563b860f74cb6fcaefbbee31cf.setIcon(icon_260ae3b12eda4fe3e164df8811e87d7d);
+        
+    
+        var popup_7de4aed160a0d54ed1a2b692de40ccf5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0dc0bf514cd7ca00931e0be1b9755392 = $(`<div id="html_0dc0bf514cd7ca00931e0be1b9755392" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 1814906.8931439733<br><b>DiffAV2021_mean:</b> 55873.28232758621<br><b>PercChangeAV2021_mean:</b> 0.09154930152007888<br><b>RecoveryDiffAV_mean:</b> 608597.3608854078<br><b>RecoveryPercChangeAV_mean:</b> 0.5311932525423846<br><b>GROSS_AREA_mean:</b> 4056.9574264586076<br><b>RES_FLOOR_mean:</b> 2.1014652699206957<br><b>LIVING_AREA_mean:</b> 3527.82837149378<br><b>LAND_VALUE_mean:</b> 413391.2477069817<br><b>BLDG_VALUE_mean:</b> 1462971.0286409997<br><b>TOTAL_VALUE_mean:</b> 1876795.8135446406<br><b>FY2000.AV_mean:</b> 430803.2352073341<br><b>GrowthPercChangeAV_mean:</b> 1.7026206502397843<br><b>CrashPercChangeAV_mean:</b> -0.003228597561835301<br><b>NUM_BLDGS_mean:</b> 1.0021823937351018<br><b>LAND_SF_mean:</b> 3640.361763291339<br><b>YR_BUILT_mean:</b> 1913.2615372548933<br><b>GROSS_TAX_mean:</b> 22829.273041018016<br><b>Observation_Count:</b> 538</div>`)[0];
+                popup_7de4aed160a0d54ed1a2b692de40ccf5.setContent(html_0dc0bf514cd7ca00931e0be1b9755392);
+            
+        
+
+        marker_f4f098563b860f74cb6fcaefbbee31cf.bindPopup(popup_7de4aed160a0d54ed1a2b692de40ccf5)
+        ;
+
+        
+    
+    
+            var marker_98a59374deb44ec634713a3263902e52 = L.marker(
+                [42.35705004021341, -71.06826236662862],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_052a16aaa393a844ba03033d48ec1aac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_98a59374deb44ec634713a3263902e52.setIcon(icon_052a16aaa393a844ba03033d48ec1aac);
+        
+    
+        var popup_2db77a00796135095ec753a98b3b65d6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7ceee4a424a91c6995d00922eb47cfbc = $(`<div id="html_7ceee4a424a91c6995d00922eb47cfbc" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 1763863.9500285478<br><b>DiffAV2021_mean:</b> 52559.58452570217<br><b>PercChangeAV2021_mean:</b> 0.06511084773808005<br><b>RecoveryDiffAV_mean:</b> 471822.2204238789<br><b>RecoveryPercChangeAV_mean:</b> 0.4917393398763377<br><b>GROSS_AREA_mean:</b> 3051.8989756798155<br><b>RES_FLOOR_mean:</b> 2.0463352841810574<br><b>LIVING_AREA_mean:</b> 2530.8690979866356<br><b>LAND_VALUE_mean:</b> 492137.79256459913<br><b>BLDG_VALUE_mean:</b> 1250477.4977289382<br><b>TOTAL_VALUE_mean:</b> 1743439.6201097649<br><b>FY2000.AV_mean:</b> 473791.0848403964<br><b>GrowthPercChangeAV_mean:</b> 1.327619637253227<br><b>CrashPercChangeAV_mean:</b> 0.05153589891804501<br><b>NUM_BLDGS_mean:</b> 1.0016250465353789<br><b>LAND_SF_mean:</b> 2533.7289692752784<br><b>YR_BUILT_mean:</b> 1906.428617316743<br><b>GROSS_TAX_mean:</b> 17222.65924942061<br><b>Observation_Count:</b> 4189</div>`)[0];
+                popup_2db77a00796135095ec753a98b3b65d6.setContent(html_7ceee4a424a91c6995d00922eb47cfbc);
+            
+        
+
+        marker_98a59374deb44ec634713a3263902e52.bindPopup(popup_2db77a00796135095ec753a98b3b65d6)
+        ;
+
+        
+    
+    
+            var marker_8f01828f6817ae193cf714050a39000d = L.marker(
+                [42.34835670242797, -71.15493542285233],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_db29e03624541be2616668bfde36c76a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8f01828f6817ae193cf714050a39000d.setIcon(icon_db29e03624541be2616668bfde36c76a);
+        
+    
+        var popup_8b1ba9bb70973658769fa6696198143c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3fb5194188f396bbd94d1b4111f94bbd = $(`<div id="html_3fb5194188f396bbd94d1b4111f94bbd" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 969612.979886077<br><b>DiffAV2021_mean:</b> 46161.89637853555<br><b>PercChangeAV2021_mean:</b> 0.07718201952356869<br><b>RecoveryDiffAV_mean:</b> 280611.3767389388<br><b>RecoveryPercChangeAV_mean:</b> 0.4947220762551498<br><b>GROSS_AREA_mean:</b> 4362.76737269346<br><b>RES_FLOOR_mean:</b> 1.6237414401063868<br><b>LIVING_AREA_mean:</b> 3462.26832683447<br><b>LAND_VALUE_mean:</b> 279016.9135567309<br><b>BLDG_VALUE_mean:</b> 732760.7110780595<br><b>TOTAL_VALUE_mean:</b> 1014752.1419141903<br><b>FY2000.AV_mean:</b> 271131.94480986125<br><b>GrowthPercChangeAV_mean:</b> 1.5410948908957516<br><b>CrashPercChangeAV_mean:</b> -0.07186978980742849<br><b>NUM_BLDGS_mean:</b> 1.0168971000064964<br><b>LAND_SF_mean:</b> 6207.9701482839055<br><b>YR_BUILT_mean:</b> 1935.9908565318851<br><b>GROSS_TAX_mean:</b> 10893.491719807937<br><b>Observation_Count:</b> 11839</div>`)[0];
+                popup_8b1ba9bb70973658769fa6696198143c.setContent(html_3fb5194188f396bbd94d1b4111f94bbd);
+            
+        
+
+        marker_8f01828f6817ae193cf714050a39000d.bindPopup(popup_8b1ba9bb70973658769fa6696198143c)
+        ;
+
+        
+    
+    
+            var marker_a929bf7448af6ba67be08f17a5f7755c = L.marker(
+                [42.37931017410282, -71.06376664747475],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_ae53d7af23a53a872f1f220071c03931 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a929bf7448af6ba67be08f17a5f7755c.setIcon(icon_ae53d7af23a53a872f1f220071c03931);
+        
+    
+        var popup_1476a3f7c0325bf5f095b7ae970ad02d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b47801f29a247577687d50bb88e4530e = $(`<div id="html_b47801f29a247577687d50bb88e4530e" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 1173417.2673037823<br><b>DiffAV2021_mean:</b> 72740.70641913153<br><b>PercChangeAV2021_mean:</b> 0.07114273643783171<br><b>RecoveryDiffAV_mean:</b> 360754.0620867839<br><b>RecoveryPercChangeAV_mean:</b> 0.5754492806965315<br><b>GROSS_AREA_mean:</b> 4375.694334381707<br><b>RES_FLOOR_mean:</b> 1.9807986464247223<br><b>LIVING_AREA_mean:</b> 3704.365629879662<br><b>LAND_VALUE_mean:</b> 245409.65898976513<br><b>BLDG_VALUE_mean:</b> 890472.8910974665<br><b>TOTAL_VALUE_mean:</b> 1140406.2050694954<br><b>FY2000.AV_mean:</b> 355010.9214496804<br><b>GrowthPercChangeAV_mean:</b> 1.5940037823401005<br><b>CrashPercChangeAV_mean:</b> -0.04579077941043169<br><b>NUM_BLDGS_mean:</b> 1.0220299213041484<br><b>LAND_SF_mean:</b> 5322.132765656746<br><b>YR_BUILT_mean:</b> 1921.2533485141978<br><b>GROSS_TAX_mean:</b> 12020.288527022256<br><b>Observation_Count:</b> 7182</div>`)[0];
+                popup_1476a3f7c0325bf5f095b7ae970ad02d.setContent(html_b47801f29a247577687d50bb88e4530e);
+            
+        
+
+        marker_a929bf7448af6ba67be08f17a5f7755c.bindPopup(popup_1476a3f7c0325bf5f095b7ae970ad02d)
+        ;
+
+        
+    
+    
+            var marker_fc1709eead4106bcccddb15d347941b7 = L.marker(
+                [42.34902733391333, -71.06166205339726],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_45f2e72b2d73c8a7e5deb985cc87f940 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fc1709eead4106bcccddb15d347941b7.setIcon(icon_45f2e72b2d73c8a7e5deb985cc87f940);
+        
+    
+        var popup_3802ab1376b2dbe49bcacf7262d75bfb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b9e4f07d576449d7ad8b9182405940cd = $(`<div id="html_b9e4f07d576449d7ad8b9182405940cd" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 3729382.392606453<br><b>DiffAV2021_mean:</b> 164928.40314136125<br><b>PercChangeAV2021_mean:</b> 0.05038495859305138<br><b>RecoveryDiffAV_mean:</b> 861693.2507531137<br><b>RecoveryPercChangeAV_mean:</b> 0.6337363909615445<br><b>GROSS_AREA_mean:</b> 10962.961930330004<br><b>RES_FLOOR_mean:</b> 1.9666396449881145<br><b>LIVING_AREA_mean:</b> 9580.529444967575<br><b>LAND_VALUE_mean:</b> 946743.4047871323<br><b>BLDG_VALUE_mean:</b> 3167582.6030625347<br><b>TOTAL_VALUE_mean:</b> 4120673.815956468<br><b>FY2000.AV_mean:</b> 805959.7723169294<br><b>GrowthPercChangeAV_mean:</b> 1.5810039546537868<br><b>CrashPercChangeAV_mean:</b> 0.08105133312817103<br><b>NUM_BLDGS_mean:</b> 1.0270237798544573<br><b>LAND_SF_mean:</b> 9109.262219936367<br><b>YR_BUILT_mean:</b> 1946.262683871455<br><b>GROSS_TAX_mean:</b> 29697.245958309926<br><b>Observation_Count:</b> 595</div>`)[0];
+                popup_3802ab1376b2dbe49bcacf7262d75bfb.setContent(html_b9e4f07d576449d7ad8b9182405940cd);
+            
+        
+
+        marker_fc1709eead4106bcccddb15d347941b7.bindPopup(popup_3802ab1376b2dbe49bcacf7262d75bfb)
+        ;
+
+        
+    
+    
+            var marker_5675a21766fd85d8d748e249f63dbfaa = L.marker(
+                [42.298462333358806, -71.06345682191385],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_d4e8e869bb7cdde28843ca481bede9fe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5675a21766fd85d8d748e249f63dbfaa.setIcon(icon_d4e8e869bb7cdde28843ca481bede9fe);
+        
+    
+        var popup_e8acff30a04ffaf0a450e936b7b73b92 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_713a0ddbb553b3c3f7fe7b8d799dc36b = $(`<div id="html_713a0ddbb553b3c3f7fe7b8d799dc36b" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 766843.084489454<br><b>DiffAV2021_mean:</b> 67812.14130746244<br><b>PercChangeAV2021_mean:</b> 0.1482321882349356<br><b>RecoveryDiffAV_mean:</b> 209235.772576761<br><b>RecoveryPercChangeAV_mean:</b> 0.5669397244255939<br><b>GROSS_AREA_mean:</b> 5206.3288468688725<br><b>RES_FLOOR_mean:</b> 2.1188721331359717<br><b>LIVING_AREA_mean:</b> 3853.4262830383354<br><b>LAND_VALUE_mean:</b> 230755.54526745627<br><b>BLDG_VALUE_mean:</b> 547148.9305179467<br><b>TOTAL_VALUE_mean:</b> 781328.2043980263<br><b>FY2000.AV_mean:</b> 218887.49559982587<br><b>GrowthPercChangeAV_mean:</b> 2.4223393743097716<br><b>CrashPercChangeAV_mean:</b> -0.15005856097669265<br><b>NUM_BLDGS_mean:</b> 1.0164817213365316<br><b>LAND_SF_mean:</b> 6955.366726332085<br><b>YR_BUILT_mean:</b> 1925.291130435869<br><b>GROSS_TAX_mean:</b> 7875.980144241424<br><b>Observation_Count:</b> 26482</div>`)[0];
+                popup_e8acff30a04ffaf0a450e936b7b73b92.setContent(html_713a0ddbb553b3c3f7fe7b8d799dc36b);
+            
+        
+
+        marker_5675a21766fd85d8d748e249f63dbfaa.bindPopup(popup_e8acff30a04ffaf0a450e936b7b73b92)
+        ;
+
+        
+    
+    
+            var marker_0e92578544473e7365deb6785bc9670f = L.marker(
+                [42.355593177987956, -71.05765065737086],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_905a8c9d9c2152f6b3ce7450bfea01b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0e92578544473e7365deb6785bc9670f.setIcon(icon_905a8c9d9c2152f6b3ce7450bfea01b5);
+        
+    
+        var popup_f6562e4f16e9b165a03639fef6b31ada = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_37ee28dd9eabd3f3a0a219622bacddfe = $(`<div id="html_37ee28dd9eabd3f3a0a219622bacddfe" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 6380782.277993152<br><b>DiffAV2021_mean:</b> 186114.78075615122<br><b>PercChangeAV2021_mean:</b> -0.0029299682135917903<br><b>RecoveryDiffAV_mean:</b> 1697967.9746166547<br><b>RecoveryPercChangeAV_mean:</b> 0.5162202852953043<br><b>GROSS_AREA_mean:</b> 15550.585422606991<br><b>RES_FLOOR_mean:</b> 1.5409536711936622<br><b>LIVING_AREA_mean:</b> 14066.512757323138<br><b>LAND_VALUE_mean:</b> 1469332.8825609004<br><b>BLDG_VALUE_mean:</b> 5375296.803397328<br><b>TOTAL_VALUE_mean:</b> 6849120.632029515<br><b>FY2000.AV_mean:</b> 2063804.3718992355<br><b>GrowthPercChangeAV_mean:</b> 1.4935417311108994<br><b>CrashPercChangeAV_mean:</b> 0.020998968120913404<br><b>NUM_BLDGS_mean:</b> 1.0022128649988238<br><b>LAND_SF_mean:</b> 6764.559691489747<br><b>YR_BUILT_mean:</b> 1963.0244335089312<br><b>GROSS_TAX_mean:</b> 124525.94020444452<br><b>Observation_Count:</b> 5170</div>`)[0];
+                popup_f6562e4f16e9b165a03639fef6b31ada.setContent(html_37ee28dd9eabd3f3a0a219622bacddfe);
+            
+        
+
+        marker_0e92578544473e7365deb6785bc9670f.bindPopup(popup_f6562e4f16e9b165a03639fef6b31ada)
+        ;
+
+        
+    
+    
+            var marker_5b07705f1e0f43e31f1fee9c2ae4f424 = L.marker(
+                [42.37269016982925, -71.01566374202434],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_b83664f3a4246d1a67a839ab49bc9c88 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5b07705f1e0f43e31f1fee9c2ae4f424.setIcon(icon_b83664f3a4246d1a67a839ab49bc9c88);
+        
+    
+        var popup_41f7738ab51dea3e44b9ca177f192965 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fd41d4201b3e5dcb4176c31a29f703b4 = $(`<div id="html_fd41d4201b3e5dcb4176c31a29f703b4" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 876302.4347186979<br><b>DiffAV2021_mean:</b> 93029.63574772111<br><b>PercChangeAV2021_mean:</b> 0.17107841571579077<br><b>RecoveryDiffAV_mean:</b> 238195.10948482787<br><b>RecoveryPercChangeAV_mean:</b> 0.6792748632218237<br><b>GROSS_AREA_mean:</b> 5236.928890772117<br><b>RES_FLOOR_mean:</b> 2.1073319661633554<br><b>LIVING_AREA_mean:</b> 4265.477497498264<br><b>LAND_VALUE_mean:</b> 284618.2115617278<br><b>BLDG_VALUE_mean:</b> 615122.4586185744<br><b>TOTAL_VALUE_mean:</b> 906771.2901773953<br><b>FY2000.AV_mean:</b> 258116.3553229322<br><b>GrowthPercChangeAV_mean:</b> 2.488364140251419<br><b>CrashPercChangeAV_mean:</b> -0.18962139196222133<br><b>NUM_BLDGS_mean:</b> 1.0221319249133713<br><b>LAND_SF_mean:</b> 18114.06063195489<br><b>YR_BUILT_mean:</b> 1927.7705685293524<br><b>GROSS_TAX_mean:</b> 8885.065841917058<br><b>Observation_Count:</b> 9139</div>`)[0];
+                popup_41f7738ab51dea3e44b9ca177f192965.setContent(html_fd41d4201b3e5dcb4176c31a29f703b4);
+            
+        
+
+        marker_5b07705f1e0f43e31f1fee9c2ae4f424.bindPopup(popup_41f7738ab51dea3e44b9ca177f192965)
+        ;
+
+        
+    
+    
+            var marker_c1d9f8d8d9ceb0a2c8ed0198659d63fa = L.marker(
+                [42.344767168487245, -71.09611485698127],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_1470661c45413e01fb6a1e4e4664fa37 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c1d9f8d8d9ceb0a2c8ed0198659d63fa.setIcon(icon_1470661c45413e01fb6a1e4e4664fa37);
+        
+    
+        var popup_d250f4b0b390424e746b3d4ff26a3ea1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3a270109d8dad4f6c7ce5a30f046cbdd = $(`<div id="html_3a270109d8dad4f6c7ce5a30f046cbdd" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 2921624.149833305<br><b>DiffAV2021_mean:</b> 189560.3424317618<br><b>PercChangeAV2021_mean:</b> 0.031172899759194767<br><b>RecoveryDiffAV_mean:</b> 838195.3619065224<br><b>RecoveryPercChangeAV_mean:</b> 0.5735061409177796<br><b>GROSS_AREA_mean:</b> 8351.305733065723<br><b>RES_FLOOR_mean:</b> 1.6041454007254372<br><b>LIVING_AREA_mean:</b> 7304.418537350702<br><b>LAND_VALUE_mean:</b> 884378.7290445842<br><b>BLDG_VALUE_mean:</b> 2420175.2314725225<br><b>TOTAL_VALUE_mean:</b> 3306919.6095718034<br><b>FY2000.AV_mean:</b> 537440.7343687401<br><b>GrowthPercChangeAV_mean:</b> 1.8492035521625623<br><b>CrashPercChangeAV_mean:</b> 0.07777383928479695<br><b>NUM_BLDGS_mean:</b> 1.0146874224508196<br><b>LAND_SF_mean:</b> 5899.834259134823<br><b>YR_BUILT_mean:</b> 1923.4830962348326<br><b>GROSS_TAX_mean:</b> 22293.054849156364<br><b>Observation_Count:</b> 4598</div>`)[0];
+                popup_d250f4b0b390424e746b3d4ff26a3ea1.setContent(html_3a270109d8dad4f6c7ce5a30f046cbdd);
+            
+        
+
+        marker_c1d9f8d8d9ceb0a2c8ed0198659d63fa.bindPopup(popup_d250f4b0b390424e746b3d4ff26a3ea1)
+        ;
+
+        
+    
+    
+            var marker_72aad2d9cd6af6fbcbf74b8940c02f28 = L.marker(
+                [42.32794087542065, -70.96877509407601],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_65a2655fa5ad332a73fcd24071aa3622 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_72aad2d9cd6af6fbcbf74b8940c02f28.setIcon(icon_65a2655fa5ad332a73fcd24071aa3622);
+        
+    
+        var popup_0e4da106b2cca5c9a4fc8d2ba23039c4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_647bb236c10066c7bf8ff02d3cb68e6d = $(`<div id="html_647bb236c10066c7bf8ff02d3cb68e6d" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 24101565.384615384<br><b>DiffAV2021_mean:</b> -41323.07692307692<br><b>PercChangeAV2021_mean:</b> -0.02446903572653846<br><b>RecoveryDiffAV_mean:</b> 417338.3286940864<br><b>RecoveryPercChangeAV_mean:</b> 0.5586199022982083<br><b>GROSS_AREA_mean:</b> 39524.63692945373<br><b>RES_FLOOR_mean:</b> 1.8954257246370139<br><b>LIVING_AREA_mean:</b> 31799.27061057706<br><b>LAND_VALUE_mean:</b> 20941461.53846154<br><b>BLDG_VALUE_mean:</b> 4297688.461538462<br><b>TOTAL_VALUE_mean:</b> 25245446.153846152<br><b>FY2000.AV_mean:</b> 375971.9594649225<br><b>GrowthPercChangeAV_mean:</b> 1.9228927195202714<br><b>CrashPercChangeAV_mean:</b> -0.061114690346222474<br><b>NUM_BLDGS_mean:</b> 2.5<br><b>LAND_SF_mean:</b> 1312052.076923077<br><b>YR_BUILT_mean:</b> 1927.3099711211228<br><b>GROSS_TAX_mean:</b> 564.7588461538461<br><b>Observation_Count:</b> 26</div>`)[0];
+                popup_0e4da106b2cca5c9a4fc8d2ba23039c4.setContent(html_647bb236c10066c7bf8ff02d3cb68e6d);
+            
+        
+
+        marker_72aad2d9cd6af6fbcbf74b8940c02f28.bindPopup(popup_0e4da106b2cca5c9a4fc8d2ba23039c4)
+        ;
+
+        
+    
+    
+            var marker_3208a8970f7a1ca02510f6b110895230 = L.marker(
+                [42.25503506090301, -71.12629868045502],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_0c62ee0a3ffc52ded0ee343e2975b607 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3208a8970f7a1ca02510f6b110895230.setIcon(icon_0c62ee0a3ffc52ded0ee343e2975b607);
+        
+    
+        var popup_004a32bdc3350c1a565b4db5673ed7dd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_66e4065e4378e5d4974b3a0a86e35459 = $(`<div id="html_66e4065e4378e5d4974b3a0a86e35459" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 557570.6845145082<br><b>DiffAV2021_mean:</b> 36953.14371124889<br><b>PercChangeAV2021_mean:</b> 0.09922061282370903<br><b>RecoveryDiffAV_mean:</b> 134901.37399585955<br><b>RecoveryPercChangeAV_mean:</b> 0.37466333556035614<br><b>GROSS_AREA_mean:</b> 4026.790094754671<br><b>RES_FLOOR_mean:</b> 1.7820196800505705<br><b>LIVING_AREA_mean:</b> 2807.3830920104124<br><b>LAND_VALUE_mean:</b> 241273.68075245153<br><b>BLDG_VALUE_mean:</b> 367844.0886440749<br><b>TOTAL_VALUE_mean:</b> 611848.9872421747<br><b>FY2000.AV_mean:</b> 194097.88829039884<br><b>GrowthPercChangeAV_mean:</b> 1.9528555874302234<br><b>CrashPercChangeAV_mean:</b> -0.17793822000828172<br><b>NUM_BLDGS_mean:</b> 1.0158859596896284<br><b>LAND_SF_mean:</b> 12419.468629641387<br><b>YR_BUILT_mean:</b> 1938.5817051282818<br><b>GROSS_TAX_mean:</b> 6193.599853110468<br><b>Observation_Count:</b> 9333</div>`)[0];
+                popup_004a32bdc3350c1a565b4db5673ed7dd.setContent(html_66e4065e4378e5d4974b3a0a86e35459);
+            
+        
+
+        marker_3208a8970f7a1ca02510f6b110895230.bindPopup(popup_004a32bdc3350c1a565b4db5673ed7dd)
+        ;
+
+        
+    
+    
+            var marker_1ab1e9d14c8770a165d0ea38f6069481 = L.marker(
+                [42.307769503348794, -71.1150969429541],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_bc2b11387d7ffe9e7b792f9dffdd7132 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1ab1e9d14c8770a165d0ea38f6069481.setIcon(icon_bc2b11387d7ffe9e7b792f9dffdd7132);
+        
+    
+        var popup_e54137ad991667ef8ebacb4b1e355c57 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1640a85e76fdf7abeb0b595f53b11425 = $(`<div id="html_1640a85e76fdf7abeb0b595f53b11425" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 994662.5345026706<br><b>DiffAV2021_mean:</b> 63587.12950819672<br><b>PercChangeAV2021_mean:</b> 0.08656515363730531<br><b>RecoveryDiffAV_mean:</b> 291247.5196273408<br><b>RecoveryPercChangeAV_mean:</b> 0.5548150178330056<br><b>GROSS_AREA_mean:</b> 4315.994408117529<br><b>RES_FLOOR_mean:</b> 1.9170645250393588<br><b>LIVING_AREA_mean:</b> 3319.505910460064<br><b>LAND_VALUE_mean:</b> 239759.79378988594<br><b>BLDG_VALUE_mean:</b> 701274.1862952001<br><b>TOTAL_VALUE_mean:</b> 942921.9415155727<br><b>FY2000.AV_mean:</b> 287085.8995049184<br><b>GrowthPercChangeAV_mean:</b> 1.922234062996294<br><b>CrashPercChangeAV_mean:</b> -0.07320960386216982<br><b>NUM_BLDGS_mean:</b> 1.017022355550965<br><b>LAND_SF_mean:</b> 8077.306401905515<br><b>YR_BUILT_mean:</b> 1928.4049223611348<br><b>GROSS_TAX_mean:</b> 8495.41967442797<br><b>Observation_Count:</b> 12625</div>`)[0];
+                popup_e54137ad991667ef8ebacb4b1e355c57.setContent(html_1640a85e76fdf7abeb0b595f53b11425);
+            
+        
+
+        marker_1ab1e9d14c8770a165d0ea38f6069481.bindPopup(popup_e54137ad991667ef8ebacb4b1e355c57)
+        ;
+
+        
+    
+    
+            var marker_50b6dcd9c1d2cd0f8d8ba05aaa1311cd = L.marker(
+                [42.350982945102515, -71.05782809420242],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_fec3c70938a656a9841ceb9b3628c61a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_50b6dcd9c1d2cd0f8d8ba05aaa1311cd.setIcon(icon_fec3c70938a656a9841ceb9b3628c61a);
+        
+    
+        var popup_c96e34eba438017523dfbcd07581b346 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_33ffc387d971b1f9e7affabdcd359169 = $(`<div id="html_33ffc387d971b1f9e7affabdcd359169" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 1666323.6800964717<br><b>DiffAV2021_mean:</b> 39774.96875<br><b>PercChangeAV2021_mean:</b> 0.024789643197431682<br><b>RecoveryDiffAV_mean:</b> 439241.50351051684<br><b>RecoveryPercChangeAV_mean:</b> 0.47798119691850743<br><b>GROSS_AREA_mean:</b> 5677.9485184078085<br><b>RES_FLOOR_mean:</b> 1.5071314685360067<br><b>LIVING_AREA_mean:</b> 4921.7405513687445<br><b>LAND_VALUE_mean:</b> 295622.0042354553<br><b>BLDG_VALUE_mean:</b> 1417793.4926724283<br><b>TOTAL_VALUE_mean:</b> 1713443.7449726372<br><b>FY2000.AV_mean:</b> 502263.7910711269<br><b>GrowthPercChangeAV_mean:</b> 1.5903300515176808<br><b>CrashPercChangeAV_mean:</b> -0.023822152647017262<br><b>NUM_BLDGS_mean:</b> 1.0001176937002263<br><b>LAND_SF_mean:</b> 2407.9436200627397<br><b>YR_BUILT_mean:</b> 1927.331460725493<br><b>GROSS_TAX_mean:</b> 31912.40565374633<br><b>Observation_Count:</b> 538</div>`)[0];
+                popup_c96e34eba438017523dfbcd07581b346.setContent(html_33ffc387d971b1f9e7affabdcd359169);
+            
+        
+
+        marker_50b6dcd9c1d2cd0f8d8ba05aaa1311cd.bindPopup(popup_c96e34eba438017523dfbcd07581b346)
+        ;
+
+        
+    
+    
+            var marker_e5585c437220feb8d7b3b909056db0cb = L.marker(
+                [42.338608879646394, -71.10510267838991],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_89dd283ede646ebaed573c8ace8692f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e5585c437220feb8d7b3b909056db0cb.setIcon(icon_89dd283ede646ebaed573c8ace8692f2);
+        
+    
+        var popup_5694481634d51370d594cda1c13fd4c8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3fc91a8671afa5b2236e5a2ed3b735ac = $(`<div id="html_3fc91a8671afa5b2236e5a2ed3b735ac" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 25360924.23197345<br><b>DiffAV2021_mean:</b> 2580604.084468665<br><b>PercChangeAV2021_mean:</b> 0.08457514304709088<br><b>RecoveryDiffAV_mean:</b> 7362265.56834737<br><b>RecoveryPercChangeAV_mean:</b> 0.626002813614892<br><b>GROSS_AREA_mean:</b> 54230.39619566307<br><b>RES_FLOOR_mean:</b> 1.5547580227740838<br><b>LIVING_AREA_mean:</b> 48352.552236610136<br><b>LAND_VALUE_mean:</b> 7113723.415158506<br><b>BLDG_VALUE_mean:</b> 24153768.30174883<br><b>TOTAL_VALUE_mean:</b> 31306393.77243074<br><b>FY2000.AV_mean:</b> 2383581.6277659866<br><b>GrowthPercChangeAV_mean:</b> 2.2918699715165993<br><b>CrashPercChangeAV_mean:</b> 0.7362797427506345<br><b>NUM_BLDGS_mean:</b> 1.2004933964471822<br><b>LAND_SF_mean:</b> 23376.082968769115<br><b>YR_BUILT_mean:</b> 1946.2673836991567<br><b>GROSS_TAX_mean:</b> 93382.08435882228<br><b>Observation_Count:</b> 385</div>`)[0];
+                popup_5694481634d51370d594cda1c13fd4c8.setContent(html_3fc91a8671afa5b2236e5a2ed3b735ac);
+            
+        
+
+        marker_e5585c437220feb8d7b3b909056db0cb.bindPopup(popup_5694481634d51370d594cda1c13fd4c8)
+        ;
+
+        
+    
+    
+            var marker_e263c229247f1a0939d593a9a251ddbf = L.marker(
+                [42.277005139504254, -71.09144626298225],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_7faa3c8e3d032ad3ac3ca8410a3832d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e263c229247f1a0939d593a9a251ddbf.setIcon(icon_7faa3c8e3d032ad3ac3ca8410a3832d0);
+        
+    
+        var popup_b0a39b024e883af045d2ccb3b281dc33 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_93d42843aeeecba1fb99092a4ae3c7ee = $(`<div id="html_93d42843aeeecba1fb99092a4ae3c7ee" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 636716.1969548914<br><b>DiffAV2021_mean:</b> 57598.15815835099<br><b>PercChangeAV2021_mean:</b> 0.12981900844093494<br><b>RecoveryDiffAV_mean:</b> 159563.90965493207<br><b>RecoveryPercChangeAV_mean:</b> 0.4870848998167284<br><b>GROSS_AREA_mean:</b> 4809.670066032541<br><b>RES_FLOOR_mean:</b> 1.9321271537726745<br><b>LIVING_AREA_mean:</b> 3415.975452271249<br><b>LAND_VALUE_mean:</b> 243496.16413122753<br><b>BLDG_VALUE_mean:</b> 446262.48911575886<br><b>TOTAL_VALUE_mean:</b> 693140.9016760429<br><b>FY2000.AV_mean:</b> 173231.1723596997<br><b>GrowthPercChangeAV_mean:</b> 2.2684120497781697<br><b>CrashPercChangeAV_mean:</b> -0.18999837563815083<br><b>NUM_BLDGS_mean:</b> 1.0360134040613374<br><b>LAND_SF_mean:</b> 9032.943820209886<br><b>YR_BUILT_mean:</b> 1932.848901247297<br><b>GROSS_TAX_mean:</b> 6221.556519373498<br><b>Observation_Count:</b> 5289</div>`)[0];
+                popup_b0a39b024e883af045d2ccb3b281dc33.setContent(html_93d42843aeeecba1fb99092a4ae3c7ee);
+            
+        
+
+        marker_e263c229247f1a0939d593a9a251ddbf.bindPopup(popup_b0a39b024e883af045d2ccb3b281dc33)
+        ;
+
+        
+    
+    
+            var marker_2b0f0e001069dccb01445cb85441090b = L.marker(
+                [42.33174148832991, -71.1026066528572],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_4c663a44cbc558c4109683ee896a4d56 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2b0f0e001069dccb01445cb85441090b.setIcon(icon_4c663a44cbc558c4109683ee896a4d56);
+        
+    
+        var popup_8595a77ddd5204d386e71edf6da360c0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_864536501872038d75d95a6cc0b0cd1f = $(`<div id="html_864536501872038d75d95a6cc0b0cd1f" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 1624421.6169438912<br><b>DiffAV2021_mean:</b> 70840.84653465346<br><b>PercChangeAV2021_mean:</b> 0.1048779851249179<br><b>RecoveryDiffAV_mean:</b> 600202.7185370253<br><b>RecoveryPercChangeAV_mean:</b> 0.8673227469318381<br><b>GROSS_AREA_mean:</b> 7218.47317343618<br><b>RES_FLOOR_mean:</b> 2.209422881994053<br><b>LIVING_AREA_mean:</b> 5927.788524504173<br><b>LAND_VALUE_mean:</b> 509903.3345867557<br><b>BLDG_VALUE_mean:</b> 1217139.0517316987<br><b>TOTAL_VALUE_mean:</b> 1730846.7905310162<br><b>FY2000.AV_mean:</b> 293981.24613394676<br><b>GrowthPercChangeAV_mean:</b> 2.741725877714388<br><b>CrashPercChangeAV_mean:</b> 0.09213206246450185<br><b>NUM_BLDGS_mean:</b> 1.0288811477025042<br><b>LAND_SF_mean:</b> 6345.170322665012<br><b>YR_BUILT_mean:</b> 1932.7800343967922<br><b>GROSS_TAX_mean:</b> 14489.617239635492<br><b>Observation_Count:</b> 2184</div>`)[0];
+                popup_8595a77ddd5204d386e71edf6da360c0.setContent(html_864536501872038d75d95a6cc0b0cd1f);
+            
+        
+
+        marker_2b0f0e001069dccb01445cb85441090b.bindPopup(popup_8595a77ddd5204d386e71edf6da360c0)
+        ;
+
+        
+    
+    
+            var marker_8e01f967c45529f2050b8cd43082db67 = L.marker(
+                [42.36546472625824, -71.05385774051861],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_417431f5b1c3870a3b7f0f7b86f9423a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8e01f967c45529f2050b8cd43082db67.setIcon(icon_417431f5b1c3870a3b7f0f7b86f9423a);
+        
+    
+        var popup_25fda67850aadca790bae494c3954044 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fd3d67cce4dd8d5b7f354bdc55cf2a51 = $(`<div id="html_fd3d67cce4dd8d5b7f354bdc55cf2a51" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 1136041.3381599316<br><b>DiffAV2021_mean:</b> 25782.85316323874<br><b>PercChangeAV2021_mean:</b> 0.04458011519765062<br><b>RecoveryDiffAV_mean:</b> 340968.5563783331<br><b>RecoveryPercChangeAV_mean:</b> 0.5160191132406146<br><b>GROSS_AREA_mean:</b> 3045.024698865646<br><b>RES_FLOOR_mean:</b> 1.848337290316933<br><b>LIVING_AREA_mean:</b> 2621.9307046607346<br><b>LAND_VALUE_mean:</b> 214795.54952567452<br><b>BLDG_VALUE_mean:</b> 885536.6193683259<br><b>TOTAL_VALUE_mean:</b> 1101517.3663399753<br><b>FY2000.AV_mean:</b> 343403.94767031685<br><b>GrowthPercChangeAV_mean:</b> 1.5469421345665377<br><b>CrashPercChangeAV_mean:</b> -0.00677691774439281<br><b>NUM_BLDGS_mean:</b> 1.005108808402722<br><b>LAND_SF_mean:</b> 2277.0756830080763<br><b>YR_BUILT_mean:</b> 1919.2934663685376<br><b>GROSS_TAX_mean:</b> 12109.123809456247<br><b>Observation_Count:</b> 4141</div>`)[0];
+                popup_25fda67850aadca790bae494c3954044.setContent(html_fd3d67cce4dd8d5b7f354bdc55cf2a51);
+            
+        
+
+        marker_8e01f967c45529f2050b8cd43082db67.bindPopup(popup_25fda67850aadca790bae494c3954044)
+        ;
+
+        
+    
+    
+            var marker_cdcc69c1dbeff3e041a380313c1b2e53 = L.marker(
+                [42.28252393711163, -71.12666259244538],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_d78701b19c87b5c32d73996b0a762ce8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cdcc69c1dbeff3e041a380313c1b2e53.setIcon(icon_d78701b19c87b5c32d73996b0a762ce8);
+        
+    
+        var popup_eb93799ed56581cd3d722598e5a39cd3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cd101c065eed650daffc2d4898b67acf = $(`<div id="html_cd101c065eed650daffc2d4898b67acf" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 648844.7773196028<br><b>DiffAV2021_mean:</b> 46912.97507749535<br><b>PercChangeAV2021_mean:</b> 0.1086609692391876<br><b>RecoveryDiffAV_mean:</b> 175310.03008414092<br><b>RecoveryPercChangeAV_mean:</b> 0.4265541963826256<br><b>GROSS_AREA_mean:</b> 3777.796729775602<br><b>RES_FLOOR_mean:</b> 1.923505558906833<br><b>LIVING_AREA_mean:</b> 2653.808372780371<br><b>LAND_VALUE_mean:</b> 185919.66418383786<br><b>BLDG_VALUE_mean:</b> 449103.3197614294<br><b>TOTAL_VALUE_mean:</b> 636168.3402746957<br><b>FY2000.AV_mean:</b> 217924.87604625587<br><b>GrowthPercChangeAV_mean:</b> 1.8112766463057208<br><b>CrashPercChangeAV_mean:</b> -0.1341768180018246<br><b>NUM_BLDGS_mean:</b> 1.0126225295032547<br><b>LAND_SF_mean:</b> 6982.266112402941<br><b>YR_BUILT_mean:</b> 1931.1073275852161<br><b>GROSS_TAX_mean:</b> 6526.776454225359<br><b>Observation_Count:</b> 8757</div>`)[0];
+                popup_eb93799ed56581cd3d722598e5a39cd3.setContent(html_cd101c065eed650daffc2d4898b67acf);
+            
+        
+
+        marker_cdcc69c1dbeff3e041a380313c1b2e53.bindPopup(popup_eb93799ed56581cd3d722598e5a39cd3)
+        ;
+
+        
+    
+    
+            var marker_97d1c509b12bad32b5a3ec07c8f1db5a = L.marker(
+                [42.31851857212616, -71.08664322574288],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_eff24f50a76535165f6ffbcdf732432b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_97d1c509b12bad32b5a3ec07c8f1db5a.setIcon(icon_eff24f50a76535165f6ffbcdf732432b);
+        
+    
+        var popup_d70c24f9d640da0fce52dfe0e1e724c8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6747ff165cbf914707d8e8846e1b956f = $(`<div id="html_6747ff165cbf914707d8e8846e1b956f" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 938190.7127981078<br><b>DiffAV2021_mean:</b> 62169.85308713214<br><b>PercChangeAV2021_mean:</b> 0.13626301500059632<br><b>RecoveryDiffAV_mean:</b> 272774.72525838274<br><b>RecoveryPercChangeAV_mean:</b> 0.7273101565550174<br><b>GROSS_AREA_mean:</b> 6601.76970511492<br><b>RES_FLOOR_mean:</b> 2.1554155776613944<br><b>LIVING_AREA_mean:</b> 5268.76725634498<br><b>LAND_VALUE_mean:</b> 330303.0735539715<br><b>BLDG_VALUE_mean:</b> 659013.9839337256<br><b>TOTAL_VALUE_mean:</b> 992144.7452060223<br><b>FY2000.AV_mean:</b> 275429.3282106793<br><b>GrowthPercChangeAV_mean:</b> 2.5319004770387057<br><b>CrashPercChangeAV_mean:</b> -0.03947356234902431<br><b>NUM_BLDGS_mean:</b> 1.0284343026850098<br><b>LAND_SF_mean:</b> 8775.554190963127<br><b>YR_BUILT_mean:</b> 1929.624761761108<br><b>GROSS_TAX_mean:</b> 7931.38412593758<br><b>Observation_Count:</b> 9374</div>`)[0];
+                popup_d70c24f9d640da0fce52dfe0e1e724c8.setContent(html_6747ff165cbf914707d8e8846e1b956f);
+            
+        
+
+        marker_97d1c509b12bad32b5a3ec07c8f1db5a.bindPopup(popup_d70c24f9d640da0fce52dfe0e1e724c8)
+        ;
+
+        
+    
+    
+            var marker_80694e6184416c2e4f56495a1fb577bc = L.marker(
+                [42.334908501019896, -71.044643938523],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_b8c126a1a29a6108f98be9751bb7fcc5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_80694e6184416c2e4f56495a1fb577bc.setIcon(icon_b8c126a1a29a6108f98be9751bb7fcc5);
+        
+    
+        var popup_fa94af62da70eb44b44bcf79670ad6e1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cdaac28c3c055a95e71bf8d47af6de18 = $(`<div id="html_cdaac28c3c055a95e71bf8d47af6de18" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 960377.48301354<br><b>DiffAV2021_mean:</b> 73080.67726065907<br><b>PercChangeAV2021_mean:</b> 0.09837575680580593<br><b>RecoveryDiffAV_mean:</b> 332467.3544526837<br><b>RecoveryPercChangeAV_mean:</b> 0.7126390718825558<br><b>GROSS_AREA_mean:</b> 3880.4637378139414<br><b>RES_FLOOR_mean:</b> 1.9247908155009867<br><b>LIVING_AREA_mean:</b> 3199.3253999191716<br><b>LAND_VALUE_mean:</b> 179647.24988657347<br><b>BLDG_VALUE_mean:</b> 698941.717253<br><b>TOTAL_VALUE_mean:</b> 880264.018407268<br><b>FY2000.AV_mean:</b> 303230.3859776974<br><b>GrowthPercChangeAV_mean:</b> 2.07049822301839<br><b>CrashPercChangeAV_mean:</b> -0.04605294684871104<br><b>NUM_BLDGS_mean:</b> 1.0122859362416519<br><b>LAND_SF_mean:</b> 4482.883892016776<br><b>YR_BUILT_mean:</b> 1931.7939049039871<br><b>GROSS_TAX_mean:</b> 9278.601882823179<br><b>Observation_Count:</b> 15005</div>`)[0];
+                popup_fa94af62da70eb44b44bcf79670ad6e1.setContent(html_cdaac28c3c055a95e71bf8d47af6de18);
+            
+        
+
+        marker_80694e6184416c2e4f56495a1fb577bc.bindPopup(popup_fa94af62da70eb44b44bcf79670ad6e1)
+        ;
+
+        
+    
+    
+            var marker_dbc9bfcc74defa74c92f6d99593ff5cf = L.marker(
+                [42.34641665367828, -71.04172701648406],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_25cdfffd52c2f16c51fd79a4626fe240 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dbc9bfcc74defa74c92f6d99593ff5cf.setIcon(icon_25cdfffd52c2f16c51fd79a4626fe240);
+        
+    
+        var popup_c85989ff4055ad42f28fa77a2e14b335 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0740e2c97b03aa523b9f5e3fc42839be = $(`<div id="html_0740e2c97b03aa523b9f5e3fc42839be" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 6510249.209424759<br><b>DiffAV2021_mean:</b> 656364.4994138335<br><b>PercChangeAV2021_mean:</b> 0.4951662935642376<br><b>RecoveryDiffAV_mean:</b> 1993420.9869289596<br><b>RecoveryPercChangeAV_mean:</b> 1.2691861196873548<br><b>GROSS_AREA_mean:</b> 17756.22554720566<br><b>RES_FLOOR_mean:</b> 1.5748061570784715<br><b>LIVING_AREA_mean:</b> 16427.492503189438<br><b>LAND_VALUE_mean:</b> 2094333.4598038616<br><b>BLDG_VALUE_mean:</b> 5439438.593780402<br><b>TOTAL_VALUE_mean:</b> 7547974.5886022<br><b>FY2000.AV_mean:</b> 564509.0942615604<br><b>GrowthPercChangeAV_mean:</b> 1.945319559618094<br><b>CrashPercChangeAV_mean:</b> -0.031649348384106823<br><b>NUM_BLDGS_mean:</b> 1.0188402287476517<br><b>LAND_SF_mean:</b> 17096.867025325882<br><b>YR_BUILT_mean:</b> 1965.9713665632755<br><b>GROSS_TAX_mean:</b> 120196.98159242935<br><b>Observation_Count:</b> 2321</div>`)[0];
+                popup_c85989ff4055ad42f28fa77a2e14b335.setContent(html_0740e2c97b03aa523b9f5e3fc42839be);
+            
+        
+
+        marker_dbc9bfcc74defa74c92f6d99593ff5cf.bindPopup(popup_c85989ff4055ad42f28fa77a2e14b335)
+        ;
+
+        
+    
+    
+            var marker_4a4acd0f9780ceebded96d40433e0788 = L.marker(
+                [42.341350404933614, -71.07136929528559],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_1a57f8a2b66334bc3727f3b46d469de9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4a4acd0f9780ceebded96d40433e0788.setIcon(icon_1a57f8a2b66334bc3727f3b46d469de9);
+        
+    
+        var popup_dd95ef0e8f0fd663f20279737d566f2f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_84e0fed248146a9aed1b62a421b90e96 = $(`<div id="html_84e0fed248146a9aed1b62a421b90e96" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 1482249.9286046987<br><b>DiffAV2021_mean:</b> 59970.66775967844<br><b>PercChangeAV2021_mean:</b> 0.0898807237949762<br><b>RecoveryDiffAV_mean:</b> 532272.5001797902<br><b>RecoveryPercChangeAV_mean:</b> 0.5696165974527221<br><b>GROSS_AREA_mean:</b> 4192.9526420739285<br><b>RES_FLOOR_mean:</b> 1.963047415058444<br><b>LIVING_AREA_mean:</b> 3678.035449686144<br><b>LAND_VALUE_mean:</b> 262077.06457970638<br><b>BLDG_VALUE_mean:</b> 1207139.4906478063<br><b>TOTAL_VALUE_mean:</b> 1470086.3726189537<br><b>FY2000.AV_mean:</b> 396108.4481884934<br><b>GrowthPercChangeAV_mean:</b> 1.7495296971371221<br><b>CrashPercChangeAV_mean:</b> 0.0394435089598793<br><b>NUM_BLDGS_mean:</b> 1.006364750788138<br><b>LAND_SF_mean:</b> 3332.636045816609<br><b>YR_BUILT_mean:</b> 1927.1160092452624<br><b>GROSS_TAX_mean:</b> 14857.670643919895<br><b>Observation_Count:</b> 10860</div>`)[0];
+                popup_dd95ef0e8f0fd663f20279737d566f2f.setContent(html_84e0fed248146a9aed1b62a421b90e96);
+            
+        
+
+        marker_4a4acd0f9780ceebded96d40433e0788.bindPopup(popup_dd95ef0e8f0fd663f20279737d566f2f)
+        ;
+
+        
+    
+    
+            var marker_6db146401084d638560d91f2e64a9846 = L.marker(
+                [42.36466834174531, -71.0655903732542],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_5278965daf2a8234fb233a1386e26f61 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6db146401084d638560d91f2e64a9846.setIcon(icon_5278965daf2a8234fb233a1386e26f61);
+        
+    
+        var popup_e1e106eb51afd6466384ab7a957c4f61 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e5a5edb0ea28c1c2c6b5f833b86db7ed = $(`<div id="html_e5a5edb0ea28c1c2c6b5f833b86db7ed" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 3749340.787477941<br><b>DiffAV2021_mean:</b> 326717.50683176774<br><b>PercChangeAV2021_mean:</b> 0.0328824458385061<br><b>RecoveryDiffAV_mean:</b> 1270391.8994827748<br><b>RecoveryPercChangeAV_mean:</b> 0.467954297249184<br><b>GROSS_AREA_mean:</b> 10648.374284005895<br><b>RES_FLOOR_mean:</b> 1.4684219302987993<br><b>LIVING_AREA_mean:</b> 9514.689834009972<br><b>LAND_VALUE_mean:</b> 986982.4340424715<br><b>BLDG_VALUE_mean:</b> 3137234.6934757764<br><b>TOTAL_VALUE_mean:</b> 4126393.3362214738<br><b>FY2000.AV_mean:</b> 601724.7507921018<br><b>GrowthPercChangeAV_mean:</b> 1.7907683896818545<br><b>CrashPercChangeAV_mean:</b> -0.04022381979167712<br><b>NUM_BLDGS_mean:</b> 1.014868526715684<br><b>LAND_SF_mean:</b> 6909.399435926219<br><b>YR_BUILT_mean:</b> 1952.732771364853<br><b>GROSS_TAX_mean:</b> 27757.928533092407<br><b>Observation_Count:</b> 2371</div>`)[0];
+                popup_e1e106eb51afd6466384ab7a957c4f61.setContent(html_e5a5edb0ea28c1c2c6b5f833b86db7ed);
+            
+        
+
+        marker_6db146401084d638560d91f2e64a9846.bindPopup(popup_e1e106eb51afd6466384ab7a957c4f61)
+        ;
+
+        
+    
+    
+            var marker_aebb46c4d5e652c90e7dbfd1d0809c1a = L.marker(
+                [42.28064227387584, -71.16002690899342],
+                {}
+            ).addTo(map_3ff069119328114a7fc139c90d74429a);
+        
+    
+            var icon_962d95a1d3e07d9c959f563cf500eb75 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_aebb46c4d5e652c90e7dbfd1d0809c1a.setIcon(icon_962d95a1d3e07d9c959f563cf500eb75);
+        
+    
+        var popup_4ff698a2dcd973bf1e11c6c6e8f957b1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_df49d4d08c593034a76882e6561b53df = $(`<div id="html_df49d4d08c593034a76882e6561b53df" style="width: 100.0%; height: 100.0%;"><b>FY2021.AV_mean:</b> 647905.2415318314<br><b>DiffAV2021_mean:</b> 41060.72270799065<br><b>PercChangeAV2021_mean:</b> 0.11159368261177074<br><b>RecoveryDiffAV_mean:</b> 143072.47415994908<br><b>RecoveryPercChangeAV_mean:</b> 0.34076721838622454<br><b>GROSS_AREA_mean:</b> 3775.471293996539<br><b>RES_FLOOR_mean:</b> 1.7153277729568983<br><b>LIVING_AREA_mean:</b> 2629.895166049814<br><b>LAND_VALUE_mean:</b> 242357.46712732923<br><b>BLDG_VALUE_mean:</b> 473620.57531650166<br><b>TOTAL_VALUE_mean:</b> 717758.8481828629<br><b>FY2000.AV_mean:</b> 222402.41931682968<br><b>GrowthPercChangeAV_mean:</b> 1.40771043518092<br><b>CrashPercChangeAV_mean:</b> -0.08995680265924057<br><b>NUM_BLDGS_mean:</b> 1.0070304310320541<br><b>LAND_SF_mean:</b> 10987.150569301319<br><b>YR_BUILT_mean:</b> 1941.072934092941<br><b>GROSS_TAX_mean:</b> 7277.967621166597<br><b>Observation_Count:</b> 11900</div>`)[0];
+                popup_4ff698a2dcd973bf1e11c6c6e8f957b1.setContent(html_df49d4d08c593034a76882e6561b53df);
+            
+        
+
+        marker_aebb46c4d5e652c90e7dbfd1d0809c1a.bindPopup(popup_4ff698a2dcd973bf1e11c6c6e8f957b1)
+        ;
+
+        
+    
+</script>
+</html>
